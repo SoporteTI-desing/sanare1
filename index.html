@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Sanare</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F5EFE7;
+      color: #0A497B;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    img.logo {
+      width: 180px;
+      animation: floatUp 2.5s ease-in-out;
+    }
+    @keyframes floatUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+      font-size: 26px;
+      margin: 20px 0 40px 0;
+      color: #0A497B;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+    .card {
+      background: white;
+      border: 2px solid #0A497B;
+      padding: 20px;
+      border-radius: 15px;
+      width: 250px;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    button {
+      background: #0A497B;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 15px;
+    }
+    button:hover { background: #08365E; }
+    footer {
+      margin-top: 50px;
+      font-size: 12px;
+      color: #6B5B4B;
+    }
+  </style>
+</head>
+<body>
+  <img src="assets/logo.png" class="logo" alt="Sanare Logo" />
+  <h1>Portal Sanare</h1>
+  <div class="container">
+    <div class="card">
+      <h3>🧬 CRM Médicos</h3>
+      <p>Visualiza el registro médico y panel de gestión.</p>
+      <button onclick="window.open('./crm/CRM-medicos.jpg', '_blank')">Abrir</button>
+    </div>
+    <div class="card">
+      <h3>💊 Cotizador Sanare</h3>
+      <p>Consulta la cotización de medicamentos y servicios.</p>
+      <button onclick="window.open('./cotizador/Cotizacion-Sanare.pdf', '_blank')">Abrir</button>
+    </div>
+    <div class="card">
+      <h3>📚 Catálogo de Medicamentos</h3>
+      <p>Explora el catálogo interactivo de productos Sanaré.</p>
+      <button onclick="window.open('./catalogo/Catalogo-Interactivo.pdf', '_blank')">Abrir</button>
+    </div>
+  </div>
+  <footer>© 2025 Sanare · Todos los derechos reservados</footer>
+</body>
+</html>
